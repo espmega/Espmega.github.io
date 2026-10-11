@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { background: #0b132b; color: white; font-family: Tahoma, sans-serif; margin: 0; }
+        
+        /* Header & Profile */
+        header { display: flex; justify-content: flex-end; padding: 20px; }
+        .profile-icon { width: 50px; height: 50px; background: #FFD700; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #0b132b; }
+
+        /* Hero Section */
+        .hero { text-align: center; padding: 50px 20px; }
+        .hero h2 { font-size: 1.5em; color: #ffffff; }
+        .tech-icons img { width: 60px; margin: 0 15px; filter: drop-shadow(0 0 5px #FFD700); }
+
+        /* Cards Section */
+        .cards-container { display: flex; justify-content: center; gap: 20px; padding: 50px; flex-wrap: wrap; }
+        .card { background: #1c2541; padding: 20px; border-radius: 15px; border: 2px solid #FFD700; width: 250px; transition: 0.4s; cursor: pointer; text-align: center; }
+        .card:hover { transform: scale(1.1); background: #3a506b; }
+        .card h3 { color: #FFD700; }
+
+        /* Modal Profile */
+        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); justify-content: center; align-items: center; }
+        .modal-content { background: #1c2541; padding: 30px; border-radius: 10px; border: 1px solid #FFD700; text-align: center; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="profile-icon" onclick="document.getElementById('profileModal').style.display='flex'">👤</div>
+    </header>
+
+    <div class="hero">
+        <h2>رباتیک ، الکترونیک ، برنامه نویسی</h2>
+        <div class="tech-icons">
+            <img src="https://cdn-icons-png.flaticon.com/512/3094/3094943.png" alt="Arduino">
+            <img src="https://cdn-icons-png.flaticon.com/512/919/919825.png" alt="ESP32">
+            <img src="https://cdn-icons-png.flaticon.com/512/3061/3061381.png" alt="Laptop">
+        </div>
+    </div>
+
+    <div class="cards-container">
+        <div class="card">
+            <h3>مکانیک</h3>
+            <p>آموزش تمام قسمت های مکانیک و ساخت و طراحی ربات های آسان تا پیچیده</p>
+        </div>
+        <div class="card">
+            <h3>الکترونیک</h3>
+            <p>آموزش تمام قسمت های سیم کشی و اتصالات ربات ها آسان تا پیچیده</p>
+        </div>
+        <div class="card">
+            <h3>برنامه نویسی</h3>
+            <p>آموزش برنامه نویسی انواع برد ها با آردوینو آی دی ای برای نوجوانان و بزرگسالان و ام بلاک برای کودکان</p>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="profileModal" class="modal" onclick="this.style.display='none'">
+        <div class="modal-content">
+            <h2>پروفایل کاربری</h2>
+            <p>این بخش برای ساخت پروفایل است. (به زودی...)</p>
+        </div>
+    </div>
+
+</body>
+</html>
